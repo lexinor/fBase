@@ -353,15 +353,15 @@ AddEventHandler('craft:frites', function()
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source)
 
-    local fritesfritecru = xPlayer.getInventoryItem('fritesfritecru').count
+    local fritescru = xPlayer.getInventoryItem('fritescru').count
     local frites = xPlayer.getInventoryItem('frites').count
 
     if frites > 60 then
         TriggerClientEvent('esx:showNotification', source, '~r~Tu à ateint la limite')
-    elseif fritesfritecru < 1 then
+    elseif fritescru < 1 then
         TriggerClientEvent('esx:showNotification', source, '~r~Pas assez de frite surgelé pour cuisiner')
     else
-        xPlayer.removeInventoryItem('fritesfritecru', 1)
+        xPlayer.removeInventoryItem('fritescru', 1)
         xPlayer.addInventoryItem('frites', 1)    
     end
 end)
