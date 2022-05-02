@@ -204,7 +204,7 @@ function CartelRetirerobjet()
                             if v.count > 0 then
                             RageUI.ButtonWithStyle(v.label, nil, {RightLabel = v.count}, true, function(Hovered, Active, Selected)
                                 if Selected then
-                                    local count = KeyboardInput("Combien ?", "", 2)
+                                    local count = KeyboardInput("Combien ?", "", 3)
                                     TriggerServerEvent('fcartel:getStockItem', v.name, tonumber(count))
                                     CartelRetirerobjet()
                                 end
@@ -234,7 +234,7 @@ function CartelDeposerobjet()
                             if item.count > 0 then
                                         RageUI.ButtonWithStyle(item.label, nil, {RightLabel = item.count}, true, function(Hovered, Active, Selected)
                                             if Selected then
-                                            local count = KeyboardInput("Combien ?", '' , 8)
+                                            local count = KeyboardInput("Combien ?", '' , 3)
                                             TriggerServerEvent('fcartel:putStockItems', item.name, tonumber(count))
                                             CartelDeposerobjet()
                                         end
@@ -331,7 +331,7 @@ function MenuCraftcartel()
                             RageUI.ButtonWithStyle(inventory.items[v].label.." ["..inventory.items[v].count.."]", nil, {RightLabel = "→"},true, function(Hovered, Active, Selected)
                                 if (Selected) then
                                     if inventory.items[v].name == "metaux" then
-                                        nbmetaux = KeyboardInput('Veuillez choisir le nombre de métaux pour le craft', '', 2)
+                                        nbmetaux = KeyboardInput('Veuillez choisir le nombre de métaux pour le craft', '', 3)
                                         if tonumber(nbmetaux) then
                                             if inventory.items[v].count >= tonumber(nbmetaux) then
                                                 RageUI.Popup({message = "~g~Montant validé"})
@@ -346,7 +346,7 @@ function MenuCraftcartel()
                                         end
                                     end
                                     if inventory.items[v].name == "meche" then
-                                        nbmeche = KeyboardInput('Veuillez choisir le nombre de mèche pour le craft', '', 2)
+                                        nbmeche = KeyboardInput('Veuillez choisir le nombre de mèche pour le craft', '', 3)
                                         if tonumber(nbmeche) then
                                             if inventory.items[v].count >= tonumber(nbmeche) then
                                                 RageUI.Popup({message = "~g~Montant validé"})
@@ -361,7 +361,7 @@ function MenuCraftcartel()
                                         end
                                     end
                                     if inventory.items[v].name == "poudre" then
-                                        nbpoudre = KeyboardInput('Veuillez choisir le nombre de poudre pour le craft', '', 2)
+                                        nbpoudre = KeyboardInput('Veuillez choisir le nombre de poudre pour le craft', '', 3)
                                         if tonumber(nbpoudre) then
                                             if inventory.items[v].count >= tonumber(nbpoudre) then
                                                 RageUI.Popup({message = "~g~Montant validé"})
@@ -376,7 +376,7 @@ function MenuCraftcartel()
                                         end
                                     end
                                     if inventory.items[v].name == "ruban" then
-                                        nbruban = KeyboardInput('Veuillez choisir le nombre de ruban adhésif pour le craft', '', 2)
+                                        nbruban = KeyboardInput('Veuillez choisir le nombre de ruban adhésif pour le craft', '', 3)
                                         if tonumber(nbruban) then
                                             if inventory.items[v].count >= tonumber(nbruban) then
                                                 RageUI.Popup({message = "~g~Montant validé"})
