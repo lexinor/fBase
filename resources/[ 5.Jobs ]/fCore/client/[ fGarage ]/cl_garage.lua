@@ -83,15 +83,15 @@ end
 --ranger voiture
 function rangervoiture()
     local playerPed  = PlayerPedId()
+    local playerPed    = PlayerPedId()
+    local coords       = GetEntityCoords(playerPed)
+    local vehicle      = GetVehiclePedIsIn(playerPed, false)
+    local vehicleProps = ESX.Game.GetVehicleProperties(vehicle)
+    local current        = GetPlayersLastVehicle(PlayerPedId(), true)
+    local engineHealth = GetVehicleEngineHealth(current)
+    local plate        = vehicleProps.plate
+    local valid2       = false
     if IsPedInAnyVehicle(playerPed,  false) and IsVehicleSeatFree(vehicle, 0) then
-        local playerPed    = PlayerPedId()
-        local coords       = GetEntityCoords(playerPed)
-        local vehicle      = GetVehiclePedIsIn(playerPed, false)
-        local vehicleProps = ESX.Game.GetVehicleProperties(vehicle)
-        local current        = GetPlayersLastVehicle(PlayerPedId(), true)
-        local engineHealth = GetVehicleEngineHealth(current)
-        local plate        = vehicleProps.plate
-        local valid2       = false
 
         ESX.TriggerServerCallback('fellow_garage:rangervoiture', function(valid)
             if engineHealth < 990 then
