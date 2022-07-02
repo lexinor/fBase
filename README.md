@@ -34,5 +34,3 @@ Extended 1.3 aka Legacy
 - F5 (Krz_personalmenu)
 - Prison (RageUI)
 - Custom véhicule (RageUI)
-
-Mise à jour régulièrement.
