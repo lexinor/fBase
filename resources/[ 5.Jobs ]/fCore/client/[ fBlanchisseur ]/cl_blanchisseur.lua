@@ -210,8 +210,9 @@ function MenuF7Blanchisseur()
 
                 RageUI.ButtonWithStyle("Interagir avec le citoyen",nil, {RightLabel = "→"}, true, function(Hovered, Active, Selected)
                     if Selected then                
-                        TriggerEvent('fellow:MenuFouille')
                         RageUI.CloseAll()
+			Wait(50)
+			TriggerEvent('fellow:MenuFouille')
                     end
                 end)
 

@@ -334,7 +334,7 @@ function Garagevigneron()
       local x, y, z = table.unpack(GetEntityCoords(PlayerPedId(), false))
       local vehicle = CreateVehicle(car, vigneron.pos.spawnvoiture.position.x, vigneron.pos.spawnvoiture.position.y, vigneron.pos.spawnvoiture.position.z, vigneron.pos.spawnvoiture.position.h, true, false)
       SetEntityAsMissionEntity(vehicle, true, true)
-      local plaque = "vigneron"..math.random(1,9)
+      local plaque = "vigne"..math.random(1,9)
       SetVehicleNumberPlateText(vehicle, plaque) 
       SetPedIntoVehicle(PlayerPedId(),vehicle,-1)
   end
